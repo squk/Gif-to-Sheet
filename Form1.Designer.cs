@@ -35,13 +35,14 @@
             this.btnExport = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.inputFolderButton = new System.Windows.Forms.Button();
-            this.inputFolderBox = new System.Windows.Forms.TextBox();
-            this.exportFolderButton = new System.Windows.Forms.Button();
-            this.outputFolderBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.folderGoButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.outputFolderBox = new System.Windows.Forms.TextBox();
+            this.exportFolderButton = new System.Windows.Forms.Button();
+            this.inputFolderBox = new System.Windows.Forms.TextBox();
+            this.inputFolderButton = new System.Windows.Forms.Button();
+            this.squareCheck = new System.Windows.Forms.CheckBox();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSprite)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -75,9 +76,9 @@
             this.panelMain.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panelMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelMain.Controls.Add(this.pbSprite);
-            this.panelMain.Location = new System.Drawing.Point(12, 204);
+            this.panelMain.Location = new System.Drawing.Point(12, 227);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(390, 326);
+            this.panelMain.Size = new System.Drawing.Size(390, 355);
             this.panelMain.TabIndex = 5;
             // 
             // pbSprite
@@ -127,23 +128,41 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Folder";
             // 
-            // inputFolderButton
+            // folderGoButton
             // 
-            this.inputFolderButton.Location = new System.Drawing.Point(292, 18);
-            this.inputFolderButton.Name = "inputFolderButton";
-            this.inputFolderButton.Size = new System.Drawing.Size(83, 23);
-            this.inputFolderButton.TabIndex = 0;
-            this.inputFolderButton.Text = "Choose Folder";
-            this.inputFolderButton.UseVisualStyleBackColor = true;
-            this.inputFolderButton.Click += new System.EventHandler(this.inputFolderButton_Click);
+            this.folderGoButton.Location = new System.Drawing.Point(336, 75);
+            this.folderGoButton.Name = "folderGoButton";
+            this.folderGoButton.Size = new System.Drawing.Size(39, 23);
+            this.folderGoButton.TabIndex = 7;
+            this.folderGoButton.Text = "Go!";
+            this.folderGoButton.UseVisualStyleBackColor = true;
+            this.folderGoButton.Click += new System.EventHandler(this.folderGoButton_Click);
             // 
-            // inputFolderBox
+            // label2
             // 
-            this.inputFolderBox.Location = new System.Drawing.Point(51, 20);
-            this.inputFolderBox.Name = "inputFolderBox";
-            this.inputFolderBox.ReadOnly = true;
-            this.inputFolderBox.Size = new System.Drawing.Size(235, 20);
-            this.inputFolderBox.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Input";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Output";
+            // 
+            // outputFolderBox
+            // 
+            this.outputFolderBox.Location = new System.Drawing.Point(51, 49);
+            this.outputFolderBox.Name = "outputFolderBox";
+            this.outputFolderBox.ReadOnly = true;
+            this.outputFolderBox.Size = new System.Drawing.Size(235, 20);
+            this.outputFolderBox.TabIndex = 4;
             // 
             // exportFolderButton
             // 
@@ -155,47 +174,43 @@
             this.exportFolderButton.UseVisualStyleBackColor = true;
             this.exportFolderButton.Click += new System.EventHandler(this.exportFolderButton_Click);
             // 
-            // outputFolderBox
+            // inputFolderBox
             // 
-            this.outputFolderBox.Location = new System.Drawing.Point(51, 49);
-            this.outputFolderBox.Name = "outputFolderBox";
-            this.outputFolderBox.ReadOnly = true;
-            this.outputFolderBox.Size = new System.Drawing.Size(235, 20);
-            this.outputFolderBox.TabIndex = 4;
+            this.inputFolderBox.Location = new System.Drawing.Point(51, 20);
+            this.inputFolderBox.Name = "inputFolderBox";
+            this.inputFolderBox.ReadOnly = true;
+            this.inputFolderBox.Size = new System.Drawing.Size(235, 20);
+            this.inputFolderBox.TabIndex = 2;
             // 
-            // label1
+            // inputFolderButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Output";
+            this.inputFolderButton.Location = new System.Drawing.Point(292, 18);
+            this.inputFolderButton.Name = "inputFolderButton";
+            this.inputFolderButton.Size = new System.Drawing.Size(83, 23);
+            this.inputFolderButton.TabIndex = 0;
+            this.inputFolderButton.Text = "Choose Folder";
+            this.inputFolderButton.UseVisualStyleBackColor = true;
+            this.inputFolderButton.Click += new System.EventHandler(this.inputFolderButton_Click);
             // 
-            // label2
+            // squareCheck
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Input";
-            // 
-            // folderGoButton
-            // 
-            this.folderGoButton.Location = new System.Drawing.Point(336, 75);
-            this.folderGoButton.Name = "folderGoButton";
-            this.folderGoButton.Size = new System.Drawing.Size(39, 23);
-            this.folderGoButton.TabIndex = 7;
-            this.folderGoButton.Text = "Go!";
-            this.folderGoButton.UseVisualStyleBackColor = true;
-            this.folderGoButton.Click += new System.EventHandler(this.folderGoButton_Click);
+            this.squareCheck.AutoSize = true;
+            this.squareCheck.Checked = true;
+            this.squareCheck.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.squareCheck.Location = new System.Drawing.Point(12, 204);
+            this.squareCheck.Name = "squareCheck";
+            this.squareCheck.Size = new System.Drawing.Size(122, 17);
+            this.squareCheck.TabIndex = 11;
+            this.squareCheck.Text = "Make Image Square";
+            this.squareCheck.UseVisualStyleBackColor = true;
+            this.squareCheck.CheckedChanged += new System.EventHandler(this.squareCheck_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 542);
+            this.ClientSize = new System.Drawing.Size(414, 594);
+            this.Controls.Add(this.squareCheck);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelMain);
@@ -210,6 +225,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -229,6 +245,7 @@
         private System.Windows.Forms.TextBox outputFolderBox;
         private System.Windows.Forms.Button exportFolderButton;
         private System.Windows.Forms.Button folderGoButton;
+        private System.Windows.Forms.CheckBox squareCheck;
     }
 }
 

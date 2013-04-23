@@ -43,7 +43,11 @@ namespace Gif_to_Sheet
             FrameDimension frameSize = new FrameDimension(gif.FrameDimensionsList[0]);
             Size imageSize = new Size(gif.Size.Width, gif.Size.Height);
             int frames = gif.GetFrameCount(frameSize);
-            int calculatedColumns = (int)Math.Round(Math.Sqrt(frames));
+            int calculatedColumns = 0;
+            if (squareCheck.Checked)
+            {
+                calculatedColumns = (int)Math.Round(Math.Sqrt(frames));
+            }
             int columns = (int)calculatedColumns < 1 ? frames : (int)calculatedColumns;
             int rows = (int)Math.Ceiling((double)frames / columns);
             bitmap = new Bitmap(columns * imageSize.Width, rows * imageSize.Height);
@@ -141,6 +145,11 @@ namespace Gif_to_Sheet
                 Console.WriteLine("Wrote : " + Path.GetFileNameWithoutExtension(filename) + "*.png");
             }
             MessageBox.Show("Operation complete");
+        }
+
+        private void squareCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            FormatImage();
         }
     }
 }
